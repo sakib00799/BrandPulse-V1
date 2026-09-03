@@ -1,0 +1,24 @@
+{
+  "model_version": "char-tfidf-logreg-v1",
+  "trained_at_utc": "2026-09-03T09:25:01.094938+00:00",
+  "seed": 42,
+  "train_rows": 691,
+  "validation_rows": 181,
+  "test_rows": 172,
+  "feature_count": 11443,
+  "vectorizer": {
+    "analyzer": "char",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "min_df": 2,
+    "max_features": 100000,
+    "sublinear_tf": true,
+    "fitted_on": "train_only"
+  },
+  "python_version": "3.11.9",
+  "scikit_learn_version": "1.9.0",
+  "total_training_and_evaluation_seconds": 2.947415800001181,
+  "model_size_bytes": 1031883
+}

@@ -1,0 +1,99 @@
+{
+  "seed": 42,
+  "rows": 1044,
+  "groups": 134,
+  "largest_group": 281,
+  "normalization": {
+    "unicode_form": "NFC",
+    "replace_urls": true,
+    "replace_emails": true,
+    "replace_phone_numbers": true,
+    "replace_order_ids": true,
+    "preserve_punctuation_emoji_negation_case": true,
+    "changed_rows": 67
+  },
+  "splits": {
+    "test": {
+      "rows": 172,
+      "groups": 27,
+      "category": {
+        "Technical/App Bug": 57,
+        "Other": 51,
+        "Delivery/Order": 25,
+        "Info/Query": 15,
+        "Account/Login": 9,
+        "Payment": 8,
+        "Refund/Return": 4,
+        "Abuse/Harassment": 3
+      },
+      "sentiment": {
+        "Negative": 73,
+        "Neutral": 66,
+        "Positive": 33
+      },
+      "priority": {
+        "Medium": 73,
+        "Low": 63,
+        "High": 36
+      },
+      "percentage": 16.48
+    },
+    "train": {
+      "rows": 691,
+      "groups": 78,
+      "category": {
+        "Other": 249,
+        "Technical/App Bug": 139,
+        "Payment": 90,
+        "Info/Query": 89,
+        "Delivery/Order": 76,
+        "Account/Login": 36,
+        "Refund/Return": 9,
+        "Abuse/Harassment": 3
+      },
+      "sentiment": {
+        "Neutral": 282,
+        "Negative": 247,
+        "Positive": 162
+      },
+      "priority": {
+        "Low": 328,
+        "Medium": 262,
+        "High": 101
+      },
+      "percentage": 66.19
+    },
+    "validation": {
+      "rows": 181,
+      "groups": 29,
+      "category": {
+        "Other": 48,
+        "Technical/App Bug": 41,
+        "Refund/Return": 25,
+        "Delivery/Order": 22,
+        "Account/Login": 20,
+        "Info/Query": 14,
+        "Payment": 9,
+        "Abuse/Harassment": 2
+      },
+      "sentiment": {
+        "Negative": 79,
+        "Neutral": 68,
+        "Positive": 34
+      },
+      "priority": {
+        "Low": 64,
+        "Medium": 64,
+        "High": 53
+      },
+      "percentage": 17.34
+    }
+  },
+  "leakage_checks": {
+    "leakage_group_overlap_count": 0,
+    "source_url_overlap_count": 0,
+    "normalized_text_overlap_count": 0,
+    "passed": true
+  },
+  "test_policy": "locked_real_human_labeled_holdout_not_for_model_selection"
+}

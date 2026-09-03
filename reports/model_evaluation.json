@@ -1,0 +1,400 @@
+{
+  "selected_model": "char-tfidf-logreg-v1",
+  "selection_reason": "higher test metrics than the compact offline fallback on every target; pretrained candidates unavailable",
+  "comparison": {
+    "char_tfidf_logistic_regression": {
+      "category": {
+        "macro_f1": 0.27207049486461254,
+        "weighted_f1": 0.37395365122793295,
+        "accuracy": 0.38372093023255816
+      },
+      "sentiment": {
+        "macro_f1": 0.6373268052224886,
+        "weighted_f1": 0.679427562601082,
+        "accuracy": 0.6976744186046512
+      },
+      "priority": {
+        "macro_f1": 0.5177262318165191,
+        "weighted_f1": 0.570085491449981,
+        "accuracy": 0.6046511627906976
+      }
+    },
+    "compact_character_transformer": {
+      "category": {
+        "macro_f1": 0.14929291868127104,
+        "weighted_f1": 0.24320471490571738,
+        "accuracy": 0.27906976744186046
+      },
+      "sentiment": {
+        "macro_f1": 0.4271232439335888,
+        "weighted_f1": 0.4983502071638599,
+        "accuracy": 0.5581395348837209
+      },
+      "priority": {
+        "macro_f1": 0.44826206551637915,
+        "weighted_f1": 0.4907191914257634,
+        "accuracy": 0.47093023255813954
+      }
+    }
+  },
+  "subgroups": {
+    "category": {
+      "company": [
+        {
+          "group": "Banglalink",
+          "support": 19,
+          "accuracy": 0.47368421052631576,
+          "macro_f1_present_classes": 0.17777777777777778
+        },
+        {
+          "group": "Grameenphone",
+          "support": 10,
+          "accuracy": 0.6,
+          "macro_f1_present_classes": 0.16
+        },
+        {
+          "group": "Nagad",
+          "support": 1,
+          "accuracy": 0.0,
+          "macro_f1_present_classes": 0.0
+        },
+        {
+          "group": "Pathao",
+          "support": 117,
+          "accuracy": 0.3333333333333333,
+          "macro_f1_present_classes": 0.25711538461538463
+        },
+        {
+          "group": "Robi",
+          "support": 7,
+          "accuracy": 0.42857142857142855,
+          "macro_f1_present_classes": 0.19999999999999998
+        },
+        {
+          "group": "bKash",
+          "support": 2,
+          "accuracy": 0.5,
+          "macro_f1_present_classes": 0.3333333333333333
+        },
+        {
+          "group": "foodpanda",
+          "support": 16,
+          "accuracy": 0.5,
+          "macro_f1_present_classes": 0.40606060606060607
+        }
+      ],
+      "source_platform_normalized": [
+        {
+          "group": "play store",
+          "support": 7,
+          "accuracy": 0.2857142857142857,
+          "macro_f1_present_classes": 0.1
+        },
+        {
+          "group": "playstore",
+          "support": 152,
+          "accuracy": 0.3815789473684211,
+          "macro_f1_present_classes": 0.29137849079025546
+        },
+        {
+          "group": "youtube",
+          "support": 13,
+          "accuracy": 0.46153846153846156,
+          "macro_f1_present_classes": 0.125
+        }
+      ],
+      "script_group": [
+        {
+          "group": "bangla_script",
+          "support": 6,
+          "accuracy": 1.0,
+          "macro_f1_present_classes": 1.0
+        },
+        {
+          "group": "code_mixed",
+          "support": 1,
+          "accuracy": 1.0,
+          "macro_f1_present_classes": 1.0
+        },
+        {
+          "group": "latin_script_proxy",
+          "support": 165,
+          "accuracy": 0.3575757575757576,
+          "macro_f1_present_classes": 0.24918053759965525
+        }
+      ],
+      "text_length": [
+        {
+          "group": "long",
+          "support": 128,
+          "accuracy": 0.328125,
+          "macro_f1_present_classes": 0.2745663650075415
+        },
+        {
+          "group": "short_or_equal_train_median",
+          "support": 44,
+          "accuracy": 0.5454545454545454,
+          "macro_f1_present_classes": 0.2583333333333333
+        }
+      ],
+      "category_frequency": [
+        {
+          "group": "common_category_train_ge_50",
+          "support": 156,
+          "accuracy": 0.40384615384615385,
+          "macro_f1_present_classes": 0.23813191943444043
+        },
+        {
+          "group": "minority_category_train_lt_50",
+          "support": 16,
+          "accuracy": 0.1875,
+          "macro_f1_present_classes": 0.15272727272727274
+        }
+      ]
+    },
+    "sentiment": {
+      "company": [
+        {
+          "group": "Banglalink",
+          "support": 19,
+          "accuracy": 0.7894736842105263,
+          "macro_f1_present_classes": 0.6989459815546771
+        },
+        {
+          "group": "Grameenphone",
+          "support": 10,
+          "accuracy": 0.6,
+          "macro_f1_present_classes": 0.48888888888888893
+        },
+        {
+          "group": "Nagad",
+          "support": 1,
+          "accuracy": 1.0,
+          "macro_f1_present_classes": 1.0
+        },
+        {
+          "group": "Pathao",
+          "support": 117,
+          "accuracy": 0.717948717948718,
+          "macro_f1_present_classes": 0.629742685298241
+        },
+        {
+          "group": "Robi",
+          "support": 7,
+          "accuracy": 0.5714285714285714,
+          "macro_f1_present_classes": 0.5714285714285714
+        },
+        {
+          "group": "bKash",
+          "support": 2,
+          "accuracy": 0.5,
+          "macro_f1_present_classes": 0.3333333333333333
+        },
+        {
+          "group": "foodpanda",
+          "support": 16,
+          "accuracy": 0.5625,
+          "macro_f1_present_classes": 0.391812865497076
+        }
+      ],
+      "source_platform_normalized": [
+        {
+          "group": "play store",
+          "support": 7,
+          "accuracy": 0.5714285714285714,
+          "macro_f1_present_classes": 0.4523809523809524
+        },
+        {
+          "group": "playstore",
+          "support": 152,
+          "accuracy": 0.7105263157894737,
+          "macro_f1_present_classes": 0.6666288136876373
+        },
+        {
+          "group": "youtube",
+          "support": 13,
+          "accuracy": 0.6153846153846154,
+          "macro_f1_present_classes": 0.5064102564102564
+        }
+      ],
+      "script_group": [
+        {
+          "group": "bangla_script",
+          "support": 6,
+          "accuracy": 0.5,
+          "macro_f1_present_classes": 0.35555555555555557
+        },
+        {
+          "group": "code_mixed",
+          "support": 1,
+          "accuracy": 1.0,
+          "macro_f1_present_classes": 1.0
+        },
+        {
+          "group": "latin_script_proxy",
+          "support": 165,
+          "accuracy": 0.703030303030303,
+          "macro_f1_present_classes": 0.6317050487854857
+        }
+      ],
+      "text_length": [
+        {
+          "group": "long",
+          "support": 128,
+          "accuracy": 0.6953125,
+          "macro_f1_present_classes": 0.6002538528663017
+        },
+        {
+          "group": "short_or_equal_train_median",
+          "support": 44,
+          "accuracy": 0.7045454545454546,
+          "macro_f1_present_classes": 0.6642512077294686
+        }
+      ],
+      "category_frequency": [
+        {
+          "group": "common_category_train_ge_50",
+          "support": 156,
+          "accuracy": 0.6987179487179487,
+          "macro_f1_present_classes": 0.6448822495334122
+        },
+        {
+          "group": "minority_category_train_lt_50",
+          "support": 16,
+          "accuracy": 0.6875,
+          "macro_f1_present_classes": 0.4796380090497738
+        }
+      ]
+    },
+    "priority": {
+      "company": [
+        {
+          "group": "Banglalink",
+          "support": 19,
+          "accuracy": 0.6842105263157895,
+          "macro_f1_present_classes": 0.2708333333333333
+        },
+        {
+          "group": "Grameenphone",
+          "support": 10,
+          "accuracy": 0.8,
+          "macro_f1_present_classes": 0.4444444444444444
+        },
+        {
+          "group": "Nagad",
+          "support": 1,
+          "accuracy": 0.0,
+          "macro_f1_present_classes": 0.0
+        },
+        {
+          "group": "Pathao",
+          "support": 117,
+          "accuracy": 0.5811965811965812,
+          "macro_f1_present_classes": 0.46255596255596254
+        },
+        {
+          "group": "Robi",
+          "support": 7,
+          "accuracy": 0.5714285714285714,
+          "macro_f1_present_classes": 0.36363636363636365
+        },
+        {
+          "group": "bKash",
+          "support": 2,
+          "accuracy": 1.0,
+          "macro_f1_present_classes": 1.0
+        },
+        {
+          "group": "foodpanda",
+          "support": 16,
+          "accuracy": 0.5625,
+          "macro_f1_present_classes": 0.5465587044534412
+        }
+      ],
+      "source_platform_normalized": [
+        {
+          "group": "play store",
+          "support": 7,
+          "accuracy": 0.42857142857142855,
+          "macro_f1_present_classes": 0.3
+        },
+        {
+          "group": "playstore",
+          "support": 152,
+          "accuracy": 0.6052631578947368,
+          "macro_f1_present_classes": 0.5181324066648846
+        },
+        {
+          "group": "youtube",
+          "support": 13,
+          "accuracy": 0.6923076923076923,
+          "macro_f1_present_classes": 0.4090909090909091
+        }
+      ],
+      "script_group": [
+        {
+          "group": "bangla_script",
+          "support": 6,
+          "accuracy": 1.0,
+          "macro_f1_present_classes": 1.0
+        },
+        {
+          "group": "code_mixed",
+          "support": 1,
+          "accuracy": 1.0,
+          "macro_f1_present_classes": 1.0
+        },
+        {
+          "group": "latin_script_proxy",
+          "support": 165,
+          "accuracy": 0.5878787878787879,
+          "macro_f1_present_classes": 0.5031604054859868
+        }
+      ],
+      "text_length": [
+        {
+          "group": "long",
+          "support": 128,
+          "accuracy": 0.578125,
+          "macro_f1_present_classes": 0.4779066952649564
+        },
+        {
+          "group": "short_or_equal_train_median",
+          "support": 44,
+          "accuracy": 0.6818181818181818,
+          "macro_f1_present_classes": 0.5470588235294117
+        }
+      ],
+      "category_frequency": [
+        {
+          "group": "common_category_train_ge_50",
+          "support": 156,
+          "accuracy": 0.6474358974358975,
+          "macro_f1_present_classes": 0.5132378839819857
+        },
+        {
+          "group": "minority_category_train_lt_50",
+          "support": 16,
+          "accuracy": 0.1875,
+          "macro_f1_present_classes": 0.1111111111111111
+        }
+      ]
+    }
+  },
+  "subgroup_definition": {
+    "short_long_boundary_characters_from_train_only": 43.0,
+    "minority_category_definition_from_train_only": "fewer than 50 training records",
+    "script_group_method": "character_ratio_heuristic"
+  },
+  "latency": {
+    "device": "cpu",
+    "runs": 100,
+    "median_ms": 0.61450000066543,
+    "p95_ms": 0.8263449959486024,
+    "model_size_bytes": 1031883,
+    "batch_rows": 172,
+    "batch_seconds": 0.021635899996908847,
+    "batch_rows_per_second": 7949.750184858217
+  },
+  "error_sample_rows": 24
+}

@@ -1,0 +1,14 @@
+.git
+.github
+.pytest_cache
+**/__pycache__
+**/*.pyc
+apps/web/node_modules
+apps/web/.next
+artifacts/transformer
+data
+notebooks
+tests
+tickets_*.csv
+.env
+*.db

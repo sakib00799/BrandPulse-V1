@@ -1,0 +1,52 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: brandpulse
+      POSTGRES_USER: brandpulse
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-brandpulse_local_only}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U brandpulse -d brandpulse"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://brandpulse:${POSTGRES_PASSWORD:-brandpulse_local_only}@postgres:5432/brandpulse
+      BRANDPULSE_MODEL_PATH: /app/artifacts/baseline/baseline_model.joblib
+      BRANDPULSE_SEED_DATA: /app/data/processed/dataset_version_1.csv
+      BRANDPULSE_REPORTS_DIR: /app/reports
+      BRANDPULSE_CORS_ORIGINS: http://localhost:3000
+    volumes:
+      - ./data:/app/data:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

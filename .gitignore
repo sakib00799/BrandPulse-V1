@@ -1,0 +1,29 @@
+# Generated datasets and model artifacts
+data/interim/
+data/processed/
+artifacts/*
+!artifacts/baseline/
+artifacts/baseline/*
+!artifacts/baseline/baseline_model.joblib
+!artifacts/baseline/metadata.json
+tickets_*.csv
+reports/label_review_queue.csv
+reports/error_analysis_sample.csv
+reports/*test_predictions.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Frontend build output
+node_modules/
+.next/
+coverage/
+*.tsbuildinfo

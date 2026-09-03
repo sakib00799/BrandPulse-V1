@@ -1,0 +1,26 @@
+{
+  "name": "brandpulse-bd-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": ">=15 <17",
+    "react": ">=19 <20",
+    "react-dom": ">=19 <20",
+    "recharts": ">=2 <4"
+  },
+  "devDependencies": {
+    "@types/node": ">=22 <25",
+    "@types/react": ">=19 <20",
+    "@types/react-dom": ">=19 <20",
+    "autoprefixer": ">=10 <11",
+    "postcss": ">=8 <9",
+    "tailwindcss": ">=3.4 <4",
+    "typescript": ">=5.7 <6"
+  }
+}

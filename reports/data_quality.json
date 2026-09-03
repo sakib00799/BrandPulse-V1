@@ -1,0 +1,1127 @@
+{
+  "audit_version": "1.0.0",
+  "source_files_unchanged": true,
+  "files": [
+    {
+      "filename": "tickets_labeled.csv",
+      "sha256": "6bf454f69fbc2389d86b07737f0f7095cd512aa40164463fedd3e51848610fb6",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "columns": [
+        "id",
+        "text",
+        "company",
+        "source_platform",
+        "source_url",
+        "created_at",
+        "category",
+        "sentiment",
+        "priority"
+      ],
+      "logical_records": 1044,
+      "well_formed_records": 1044,
+      "malformed_records": 0,
+      "malformed_record_numbers": [],
+      "repeated_header_records": 0,
+      "role": "labeled",
+      "parsing_warnings": []
+    },
+    {
+      "filename": "tickets_preprocessed.csv",
+      "sha256": "83a71e581bc9d95dc8ab5420190b279c2fb856d61e6a0dc513380adcc67620f1",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "columns": [
+        "id",
+        "text",
+        "company",
+        "source_platform",
+        "source_url",
+        "created_at",
+        "category",
+        "sentiment",
+        "priority"
+      ],
+      "logical_records": 1044,
+      "well_formed_records": 1044,
+      "malformed_records": 0,
+      "malformed_record_numbers": [],
+      "repeated_header_records": 0,
+      "role": "cleaned_labeled",
+      "parsing_warnings": []
+    },
+    {
+      "filename": "tickets_raw.csv",
+      "sha256": "f61b3fc80f817c4de9fb61794c3600cdaa3440a65a819591db63f7d7a6c187ee",
+      "encoding": "utf-8-sig",
+      "delimiter": ",",
+      "columns": [
+        "id",
+        "text",
+        "company",
+        "source_platform",
+        "source_url",
+        "created_at"
+      ],
+      "logical_records": 1054,
+      "well_formed_records": 1044,
+      "malformed_records": 10,
+      "malformed_record_numbers": [
+        20,
+        330,
+        359,
+        383,
+        396,
+        399,
+        402,
+        414,
+        415,
+        418
+      ],
+      "repeated_header_records": 0,
+      "role": "raw_unlabeled",
+      "parsing_warnings": [
+        "10 record(s) have a field count different from the header"
+      ]
+    }
+  ],
+  "primary_labeled_file": "tickets_labeled.csv",
+  "schema_quality": {
+    "tickets_labeled.csv": {
+      "missing_required_columns": [],
+      "missing_or_empty_by_column": {
+        "id": 0,
+        "text": 0,
+        "company": 0,
+        "source_platform": 0,
+        "source_url": 0,
+        "created_at": 0,
+        "category": 0,
+        "sentiment": 0,
+        "priority": 0
+      },
+      "empty_text": 0,
+      "extremely_short_text": 0,
+      "repeated_header_rows": 0,
+      "duplicate_id_rows": 0,
+      "exact_duplicate_text_rows": 88,
+      "normalized_duplicate_text_rows": 91,
+      "invalid_urls": 0,
+      "duplicate_source_url_rows": 914
+    },
+    "tickets_preprocessed.csv": {
+      "missing_required_columns": [],
+      "missing_or_empty_by_column": {
+        "id": 0,
+        "text": 0,
+        "company": 0,
+        "source_platform": 0,
+        "source_url": 0,
+        "created_at": 0,
+        "category": 0,
+        "sentiment": 0,
+        "priority": 0
+      },
+      "empty_text": 0,
+      "extremely_short_text": 0,
+      "repeated_header_rows": 0,
+      "duplicate_id_rows": 0,
+      "exact_duplicate_text_rows": 90,
+      "normalized_duplicate_text_rows": 93,
+      "invalid_urls": 0,
+      "duplicate_source_url_rows": 914
+    },
+    "tickets_raw.csv": {
+      "missing_required_columns": [],
+      "missing_or_empty_by_column": {
+        "id": 0,
+        "text": 0,
+        "company": 0,
+        "source_platform": 0,
+        "source_url": 0,
+        "created_at": 0
+      },
+      "empty_text": 0,
+      "extremely_short_text": 0,
+      "repeated_header_rows": 0,
+      "duplicate_id_rows": 0,
+      "exact_duplicate_text_rows": 88,
+      "normalized_duplicate_text_rows": 91,
+      "invalid_urls": 0,
+      "duplicate_source_url_rows": 914
+    }
+  },
+  "conflicts": {
+    "tickets_labeled.csv": {
+      "duplicate_id_rows": 0,
+      "conflicting_id_groups": 0,
+      "conflicting_text_groups": 1
+    },
+    "tickets_preprocessed.csv": {
+      "duplicate_id_rows": 0,
+      "conflicting_id_groups": 0,
+      "conflicting_text_groups": 1
+    },
+    "tickets_raw.csv": {
+      "duplicate_id_rows": 0,
+      "conflicting_id_groups": 0,
+      "conflicting_text_groups": 0
+    }
+  },
+  "labels": {
+    "category": {
+      "counts": {
+        "Other": 348,
+        "Technical/App Bug": 237,
+        "Delivery/Order": 123,
+        "Info/Query": 118,
+        "Payment": 107,
+        "Account/Login": 65,
+        "Refund/Return": 38,
+        "Abuse/Harassment": 8
+      },
+      "capitalization_or_spelling_variants": {},
+      "invalid_values": [],
+      "rare_classes_under_10": {
+        "Abuse/Harassment": 8
+      }
+    },
+    "sentiment": {
+      "counts": {
+        "Neutral": 416,
+        "Negative": 399,
+        "Positive": 229
+      },
+      "capitalization_or_spelling_variants": {},
+      "invalid_values": [],
+      "rare_classes_under_10": {}
+    },
+    "priority": {
+      "counts": {
+        "Low": 455,
+        "Medium": 399,
+        "High": 190
+      },
+      "capitalization_or_spelling_variants": {},
+      "invalid_values": [],
+      "rare_classes_under_10": {}
+    }
+  },
+  "company_specific_label_vocabularies": {
+    "Banglalink": {
+      "category": [
+        "Account/Login",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "Daraz": {
+      "category": [
+        "Abuse/Harassment",
+        "Account/Login",
+        "Delivery/Order",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Refund/Return",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "Grameenphone": {
+      "category": [
+        "Account/Login",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Refund/Return",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "Nagad": {
+      "category": [
+        "Account/Login",
+        "Delivery/Order",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "Pathao": {
+      "category": [
+        "Abuse/Harassment",
+        "Account/Login",
+        "Delivery/Order",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Refund/Return",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "Robi": {
+      "category": [
+        "Account/Login",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "bKash": {
+      "category": [
+        "Account/Login",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Refund/Return",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "foodpanda": {
+      "category": [
+        "Abuse/Harassment",
+        "Delivery/Order",
+        "Info/Query",
+        "Other",
+        "Payment",
+        "Refund/Return",
+        "Technical/App Bug"
+      ],
+      "sentiment": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "priority": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    }
+  },
+  "possible_sentiment_contradictions": 10,
+  "reconciliation": {
+    "labeled_rows": 1044,
+    "matched_to_well_formed_raw": 1044,
+    "unmatched_labeled_ids": [],
+    "well_formed_raw_ids_absent_from_labeled": [],
+    "metadata_conflicts": 0,
+    "raw_vs_labeled_text_conflicts": 2,
+    "cleaned_text_available": 1044,
+    "cleaned_text_changed_from_labeled": 909
+  },
+  "text_profile": {
+    "character_length_min": 4,
+    "character_length_median": 46.0,
+    "character_length_p95": 361.8499999999999,
+    "character_length_max": 590,
+    "token_length_median": 8.0,
+    "contains_emoji": 2,
+    "contains_url": 0,
+    "contains_number": 81,
+    "punctuation_characters": 1605
+  },
+  "script_groups": {
+    "latin_script_proxy": 604,
+    "bangla_script": 432,
+    "code_mixed": 8
+  },
+  "top_features_by_category": {
+    "Abuse/Harassment": {
+      "unigrams": [
+        [
+          "the",
+          14
+        ],
+        [
+          "are",
+          8
+        ],
+        [
+          "and",
+          8
+        ],
+        [
+          "to",
+          7
+        ],
+        [
+          "rude",
+          6
+        ],
+        [
+          "order",
+          5
+        ],
+        [
+          "riders",
+          4
+        ],
+        [
+          "they",
+          4
+        ],
+        [
+          "pathao",
+          4
+        ],
+        [
+          "you",
+          4
+        ]
+      ],
+      "character_trigrams": [
+        [
+          " th",
+          29
+        ],
+        [
+          "the",
+          21
+        ],
+        [
+          "he ",
+          14
+        ],
+        [
+          "er ",
+          12
+        ],
+        [
+          " an",
+          12
+        ],
+        [
+          "e t",
+          12
+        ],
+        [
+          " to",
+          11
+        ],
+        [
+          "der",
+          11
+        ],
+        [
+          "and",
+          10
+        ],
+        [
+          "re ",
+          10
+        ]
+      ]
+    },
+    "Account/Login": {
+      "unigrams": [
+        [
+          "the",
+          62
+        ],
+        [
+          "and",
+          39
+        ],
+        [
+          "to",
+          35
+        ],
+        [
+          "is",
+          31
+        ],
+        [
+          "i",
+          29
+        ],
+        [
+          "a",
+          20
+        ],
+        [
+          "account",
+          19
+        ],
+        [
+          "it",
+          18
+        ],
+        [
+          "but",
+          18
+        ],
+        [
+          "app",
+          17
+        ]
+      ],
+      "character_trigrams": [
+        [
+          " th",
+          125
+        ],
+        [
+          "the",
+          97
+        ],
+        [
+          "ing",
+          81
+        ],
+        [
+          "ng ",
+          67
+        ],
+        [
+          "he ",
+          65
+        ],
+        [
+          " an",
+          54
+        ],
+        [
+          "e a",
+          48
+        ],
+        [
+          "nd ",
+          44
+        ],
+        [
+          "and",
+          42
+        ],
+        [
+          "er ",
+          41
+        ]
+      ]
+    },
+    "Delivery/Order": {
+      "unigrams": [
+        [
+          "the",
+          71
+        ],
+        [
+          "i",
+          41
+        ],
+        [
+          "and",
+          35
+        ],
+        [
+          "to",
+          32
+        ],
+        [
+          "foodpanda",
+          30
+        ],
+        [
+          "is",
+          25
+        ],
+        [
+          "they",
+          25
+        ],
+        [
+          "daraz",
+          24
+        ],
+        [
+          "a",
+          23
+        ],
+        [
+          "my",
+          23
+        ]
+      ],
+      "character_trigrams": [
+        [
+          " th",
+          134
+        ],
+        [
+          "the",
+          122
+        ],
+        [
+          "er ",
+          84
+        ],
+        [
+          "he ",
+          75
+        ],
+        [
+          "and",
+          73
+        ],
+        [
+          "ver",
+          73
+        ],
+        [
+          "ing",
+          64
+        ],
+        [
+          "ng ",
+          59
+        ],
+        [
+          "der",
+          54
+        ],
+        [
+          "ood",
+          51
+        ]
+      ]
+    },
+    "Info/Query": {
+      "unigrams": [
+        [
+          "কিন্তু",
+          50
+        ],
+        [
+          "ভালো",
+          50
+        ],
+        [
+          "এমবি",
+          20
+        ],
+        [
+          "দাম",
+          20
+        ],
+        [
+          "বেশি",
+          17
+        ],
+        [
+          "অফার",
+          16
+        ],
+        [
+          "না",
+          15
+        ],
+        [
+          "নেটওয়ার্ক",
+          14
+        ],
+        [
+          "helpful",
+          14
+        ],
+        [
+          "অনেক",
+          13
+        ]
+      ],
+      "character_trigrams": [
+        [
+          " কি",
+          68
+        ],
+        [
+          "কিন",
+          59
+        ],
+        [
+          "ন্ত",
+          52
+        ],
+        [
+          "্তু",
+          52
+        ],
+        [
+          "ভাল",
+          52
+        ],
+        [
+          "তু ",
+          51
+        ],
+        [
+          "িন্",
+          50
+        ],
+        [
+          "ালো",
+          50
+        ],
+        [
+          " ভা",
+          46
+        ],
+        [
+          "ার ",
+          44
+        ]
+      ]
+    },
+    "Other": {
+      "unigrams": [
+        [
+          "ভালো",
+          73
+        ],
+        [
+          "service",
+          32
+        ],
+        [
+          "অফার",
+          32
+        ],
+        [
+          "foodpanda",
+          31
+        ],
+        [
+          "অনেক",
+          28
+        ],
+        [
+          "robi",
+          26
+        ],
+        [
+          "er",
+          25
+        ],
+        [
+          "খুব",
+          24
+        ],
+        [
+          "করে",
+          23
+        ],
+        [
+          "না",
+          23
+        ]
+      ],
+      "character_trigrams": [
+        [
+          "ার ",
+          82
+        ],
+        [
+          "ভাল",
+          81
+        ],
+        [
+          " ভা",
+          76
+        ],
+        [
+          "er ",
+          75
+        ],
+        [
+          "ালো",
+          73
+        ],
+        [
+          "লো ",
+          58
+        ],
+        [
+          "ood",
+          50
+        ],
+        [
+          " কর",
+          47
+        ],
+        [
+          " ko",
+          47
+        ],
+        [
+          "ফার",
+          47
+        ]
+      ]
+    },
+    "Payment": {
+      "unigrams": [
+        [
+          "bkash",
+          30
+        ],
+        [
+          "nagad",
+          23
+        ],
+        [
+          "payment",
+          20
+        ],
+        [
+          "টাকা",
+          16
+        ],
+        [
+          "ভালো",
+          13
+        ],
+        [
+          "e",
+          12
+        ],
+        [
+          "hoy",
+          12
+        ],
+        [
+          "transaction",
+          12
+        ],
+        [
+          "taka",
+          11
+        ],
+        [
+          "রিচার্জ",
+          11
+        ]
+      ],
+      "character_trigrams": [
+        [
+          "ash",
+          39
+        ],
+        [
+          "sh ",
+          33
+        ],
+        [
+          "bka",
+          30
+        ],
+        [
+          "kas",
+          30
+        ],
+        [
+          "nt ",
+          29
+        ],
+        [
+          " pa",
+          26
+        ],
+        [
+          " ko",
+          25
+        ],
+        [
+          " ho",
+          25
+        ],
+        [
+          "াকা",
+          24
+        ],
+        [
+          " কর",
+          24
+        ]
+      ]
+    },
+    "Refund/Return": {
+      "unigrams": [
+        [
+          "and",
+          63
+        ],
+        [
+          "i",
+          53
+        ],
+        [
+          "the",
+          51
+        ],
+        [
+          "to",
+          35
+        ],
+        [
+          "refund",
+          28
+        ],
+        [
+          "my",
+          25
+        ],
+        [
+          "they",
+          25
+        ],
+        [
+          "is",
+          23
+        ],
+        [
+          "a",
+          22
+        ],
+        [
+          "are",
+          21
+        ]
+      ],
+      "character_trigrams": [
+        [
+          " th",
+          128
+        ],
+        [
+          "the",
+          106
+        ],
+        [
+          "nd ",
+          92
+        ],
+        [
+          " re",
+          91
+        ],
+        [
+          " an",
+          74
+        ],
+        [
+          "and",
+          67
+        ],
+        [
+          "ed ",
+          66
+        ],
+        [
+          "er ",
+          65
+        ],
+        [
+          "he ",
+          51
+        ],
+        [
+          "ing",
+          50
+        ]
+      ]
+    },
+    "Technical/App Bug": {
+      "unigrams": [
+        [
+          "the",
+          202
+        ],
+        [
+          "app",
+          133
+        ],
+        [
+          "to",
+          120
+        ],
+        [
+          "i",
+          117
+        ],
+        [
+          "and",
+          94
+        ],
+        [
+          "is",
+          83
+        ],
+        [
+          "in",
+          61
+        ],
+        [
+          "a",
+          60
+        ],
+        [
+          "it",
+          59
+        ],
+        [
+          "this",
+          54
+        ]
+      ],
+      "character_trigrams": [
+        [
+          " th",
+          415
+        ],
+        [
+          "the",
+          326
+        ],
+        [
+          "he ",
+          214
+        ],
+        [
+          "app",
+          163
+        ],
+        [
+          "er ",
+          146
+        ],
+        [
+          " ap",
+          144
+        ],
+        [
+          "ing",
+          143
+        ],
+        [
+          " to",
+          140
+        ],
+        [
+          "is ",
+          133
+        ],
+        [
+          "ng ",
+          124
+        ]
+      ]
+    }
+  },
+  "dates": {
+    "nonempty_values": 1044,
+    "relative_like_values": 1044,
+    "recognized_relative_values": 1035,
+    "unrecognized_relative_values": [
+      "Just now",
+      "months ago"
+    ],
+    "created_at_parsed_policy": "null_without_trustworthy_collection_timestamp"
+  },
+  "figures": [
+    "text_length_characters.png",
+    "category_distribution.png",
+    "sentiment_distribution.png",
+    "priority_distribution.png"
+  ],
+  "review_queue_rows": 28,
+  "transformations": [
+    "Selected the explicit labeled dataset as the supervised row universe.",
+    "Joined only unique, well-formed raw rows by exact ID.",
+    "Preserved raw, labeled, and supplied-cleaned text in separate columns.",
+    "Renamed created_at to created_at_raw in generated data and left created_at_parsed null.",
+    "Excluded malformed raw-only rows from supervised version 1 and queued them for review.",
+    "Did not alter labels or source files."
+  ],
+  "source_hashes_before": {
+    "tickets_labeled.csv": "6bf454f69fbc2389d86b07737f0f7095cd512aa40164463fedd3e51848610fb6",
+    "tickets_preprocessed.csv": "83a71e581bc9d95dc8ab5420190b279c2fb856d61e6a0dc513380adcc67620f1",
+    "tickets_raw.csv": "f61b3fc80f817c4de9fb61794c3600cdaa3440a65a819591db63f7d7a6c187ee"
+  },
+  "source_hashes_after": {
+    "tickets_labeled.csv": "6bf454f69fbc2389d86b07737f0f7095cd512aa40164463fedd3e51848610fb6",
+    "tickets_preprocessed.csv": "83a71e581bc9d95dc8ab5420190b279c2fb856d61e6a0dc513380adcc67620f1",
+    "tickets_raw.csv": "f61b3fc80f817c4de9fb61794c3600cdaa3440a65a819591db63f7d7a6c187ee"
+  }
+}
