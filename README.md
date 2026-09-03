@@ -163,6 +163,8 @@ tests/                    unit, API integration, and smoke tests
 scripts/project.ps1       verified Windows task runner
 ```
 
+## Dataset Link: https://www.kaggle.com/datasets/mohammadsakib008/bengali-customer-support-dataset ##
+
 ## Resume bullets (verified numbers only)
 
 - Built BrandPulse-BD, a Bangla/Banglish customer-feedback platform that predicts category, sentiment, and priority across 1,044 comments from 8 companies and 4 supplied platform values using leakage-safe NLP pipelines, FastAPI, and a five-page Next.js dashboard.
